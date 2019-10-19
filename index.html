@@ -1,0 +1,2364 @@
+<!DOCTYPE html>
+<html>
+<title>튜토리얼</title>
+<style>
+@font-face {
+      font-family: "DungGeunMo";
+      src: url("DungGeunMo.woff");
+    }
+	
+	body{background-color: #484535; font-family: "DungGeunMo"; overflow:hidden}
+
+	#backk{width: auto; height: 100%; animation:start 2s alternate;}
+	#backk img{width: 1250px; height: auto;}
+	
+	#backk2{ display: none; width: auto; height: 100%;  position: absolute; top: 17px; animation:start 2s alternate;}
+	#backk2 img{width: 1250px; height: auto; animation:start 2s alternate;}
+
+
+
+
+a2 { color: black;
+	position: absolute;
+	width: 53ch;
+	margin: 21em 8em;
+	cursor: pointer;
+	}
+
+a2:hover{ color: white;
+	position: absolute;	
+	width: 53ch;
+	margin: 21em 8em;
+	}
+
+	#book { position: absolute; z-index: 99;cursor: pointer;top:2%; right: -1%; animation:start 2s alternate;}
+	#book img{ position: absolute; width: 80px; height:auto; z-index: 99;cursor: pointer;}
+	#book:hover {opacity: 0.7}
+
+	#map { position: absolute; z-index: 99;cursor: pointer;top:12%; right: -1%; animation:start 2s alternate;}
+	#map img{ position: absolute; width: 80px; height:auto; z-index: 99;cursor: pointer;}
+	#map:hover {opacity: 0.7}
+
+	#mapc { position: absolute; z-index: 99;cursor: pointer;top:12%; right: -1%; display: none;}
+	#mapc img{ position: absolute; width: 80px; height:auto; z-index: 99;cursor: pointer;}
+	#mapc:hover {opacity: 0.7}
+
+	#hint { position: absolute; z-index: 99;cursor: pointer;top:22%; right: -1%; animation:start 2s alternate;}
+	#hint img{ position: absolute; width: 80px; height:auto; z-index: 99;cursor: pointer;}
+	#hint:hover {opacity: 0.7}
+
+	#hint2 { position: absolute; z-index: 99;cursor: pointer;top:22%; right: -1%; display: none;}
+	#hint2 img{ position: absolute; width: 80px; height:auto; z-index: 99;cursor: pointer;}
+	#hint2:hover {opacity: 0.7}
+
+	#smart { position: absolute; z-index: 99;cursor: pointer;top:32%; right: -1%; animation:start 2s alternate;}
+	#smart img{ position: absolute; width: 80px; height:auto; z-index: 99;cursor: pointer;}
+	#smart:hover {opacity: 0.7}
+
+	#tada { position: absolute; z-index: 99;top:4%; right: 78%; animation:start 2s alternate; display: none;preload;}
+	#tada img{ position: absolute; width: 700px; auto; z-index: 99; preload;}
+	#tada2 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada2 img{ position: absolute; width: 700px; auto; z-index: 99;}
+	#tada3 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada3 img{ position: absolute; width: 700px; auto; z-index: 99;}
+	#tada4 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada4 img{ position: absolute; width: 700px; auto; z-index: 99;}
+
+	#tada5 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada5 img{ position: absolute; width: 700px; auto; z-index: 99;}
+
+	#tada6 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada6 img{ position: absolute; width: 700px; auto; z-index: 99;}
+
+	#tada7 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada7 img{ position: absolute; width: 700px; auto; z-index: 99;}
+
+	#tada8 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada8 img{ position: absolute; width: 700px; auto; z-index: 99;}
+
+	#tada9 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada9 img{ position: absolute; width: 700px; auto; z-index: 99;}
+
+	#tada10 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada10 img{ position: absolute; width: 700px; auto; z-index: 99;}
+
+	#tada11 { position: absolute; z-index: 99;top:4%; right: 78%; display: none;}
+	#tada11 img{ position: absolute; width: 700px; auto; z-index: 99;}
+
+	#logo{top: -5%; left: 47%; position: absolute;}
+	#logo img{width: 120px; height: auto;}
+	
+	#flashlight{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+
+	#outi{bottom:6%; left: 88%; position: absolute; cursor: pointer;}
+	#outi img{width: 120px; height: auto;}
+	#outi:hover{opacity: 0.7;}
+
+	#bx { position: absolute; bottom: 7%; left: 20%; }
+	#bx img{ width: 75%; height: auto;  }
+	#bx2 { position: absolute; bottom: 7%; left: 20%; z-index: 100;display: none;}
+	#bx2 img{ width: 75%; height: auto;  }
+
+	#hinttxt{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+
+	#yaa{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 43%;font-family: "DungGeunMo";cursor: pointer; z-index: 101;}
+	#yaa:hover{color: white; }
+	#yaa3{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 43%;font-family: "DungGeunMo";cursor: pointer;z-index: 101;}
+	#yaa3:hover{color: white; }
+
+
+	#noo{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 55%;font-family: "DungGeunMo";cursor: pointer; z-index: 101;}
+	#noo:hover{color: white; }
+
+	#foo{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute; animation: tong 2s infinite; display: none;}
+		#foo img{height: 50px;width: auto; }
+
+	#poom{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom2{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom3{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+#poom4{bottom: 9%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#poom5{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom6{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom7{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom8{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom9{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom10{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+
+	#poom11{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom12{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom13{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom14{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom15{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom16{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom17{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom18{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom19{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom20{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom21{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+	#poom22{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";}
+
+	#yaa2{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 30%;font-family: "DungGeunMo";cursor: pointer;}
+	#yaa2:hover{color: white; }
+	#noo2{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 50%;font-family: "DungGeunMo";cursor: pointer;}
+	#noo2:hover{color: white; }
+
+	#noo3{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 47%;font-family: "DungGeunMo";cursor: pointer;}
+	#noo3:hover{color: white; }
+	#vaa3{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 59%;font-family: "DungGeunMo";cursor: pointer;}
+	#vaa3:hover{color: white; }
+
+
+
+	#nn{bottom: 18%; font-weight: 5px; font-size: 1.5em; left: 28%;font-family: "DungGeunMo";}
+	#nn2{bottom: 18%; font-weight: 5px; font-size: 1.5em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#nn3{bottom: 18%; font-weight: 5px; font-size: 1.5em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#okk{bottom: 16%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#okk img{height: 20px;width: auto; }
+#oki{bottom: 16%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#oki img{height: 20px;width: auto; }
+
+
+	/*대답*/
+
+	#ch{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 29.5%;font-family: "DungGeunMo";cursor: pointer; z-index: 111;}
+	#ch:hover{color: white; }
+
+	#choose{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 52%;font-family: "DungGeunMo";cursor: pointer;z-index: 111;}
+	#choose:hover{color: white; }
+
+	#ch3{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 29.5%;font-family: "DungGeunMo";cursor: pointer; z-index: 111;}
+	#ch3:hover{color: white; }
+
+	#choose3{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 52%;font-family: "DungGeunMo";cursor: pointer;z-index: 111;}
+	#choose3:hover{color: white; }
+
+	#ch4{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 29.5%;font-family: "DungGeunMo";cursor: pointer; z-index: 111;}
+	#ch4:hover{color: white; }
+
+	#choose4{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 52%;font-family: "DungGeunMo";cursor: pointer;z-index: 111;}
+	#choose4:hover{color: white; }
+
+	#ch5{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 29.5%;font-family: "DungGeunMo";cursor: pointer; z-index: 111;}
+	#ch5:hover{color: white; }
+
+	#choose5{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 52%;font-family: "DungGeunMo";cursor: pointer;z-index: 111;}
+	#choose5:hover{color: white; }
+
+	#ch6{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 29.5%;font-family: "DungGeunMo";cursor: pointer; z-index: 111;}
+	#ch6:hover{color: white; }
+
+	#choose6{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 52%;font-family: "DungGeunMo";cursor: pointer;z-index: 111;}
+	#choose6:hover{color: white; }
+
+
+	#oo{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute; animation: tong 2s infinite;}
+		#oo img{height: 50px;width: auto; }
+	#ooo{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#ooo img{height: 50px;width: auto; }
+	#oooo{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#oooo img{height: 50px;width: auto; }	
+	#ooooo{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#ooooo img{height: 50px;width: auto; }	
+	#ko{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#ko img{height: 50px;width: auto; }
+	#koo{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#koo img{height: 50px;width: auto; }
+	#kooo{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#kooo img{height: 50px;width: auto; }
+	#koooo{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#koooo img{height: 50px;width: auto; }
+	
+	#next{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next img{height: 50px;width: auto; }
+	#next1{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next1 img{height: 50px;width: auto; }
+	#next2{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next2 img{height: 50px;width: auto; }
+
+	#next3{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next3 img{height: 50px;width: auto; }
+
+	#next4{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next4 img{height: 50px;width: auto; }
+
+	#next5{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none; animation: tong 2s infinite;}
+		#next5 img{height:50px; width: auto;  }
+
+	#next6{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next6 img{height: 50px;width: auto;  }
+	#next7{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next7 img{height: 50px;width: auto;  }
+	#next8{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next8 img{height: 50px;width: auto; }
+	#next9{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next9 img{height: 50px;width: auto; }
+	#next10{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next10 img{height:50px;width: auto;  }
+	#next11{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next11 img{height: 50px;width: auto;  }
+	#next12{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next12 img{height: 50px;width: auto;  }
+	#next13{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next13 img{height: 50px;width: auto;  }
+	#next14{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next14 img{height: 50px;width: auto;  }
+	#next15{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next15 img{height: 50px;width: auto;  }
+	#next16{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next16 img{height: 50px;width: auto;  }
+	#next17{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next17 img{height: 50px;width: auto;  }
+	#next18{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next18 img{height: 50px;width: auto;  }
+	#next19{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next19 img{height: 50px;width: auto;  }
+	#next20{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next20 img{height: 50px;width: auto;  }
+	#next21{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next21 img{height: 50px;width: auto;  }
+	#next22{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next22 img{height: 50px;width: auto;  }
+	#next23{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next23 img{height: 50px;width: auto;  }
+	#next24{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next24 img{height: 50px;width: auto;  }
+	#next25{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next25 img{height: 50px;width: auto;  }
+	#next26{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next26 img{height: 50px;width: auto;  }
+	#next27{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next27 img{height: 50px;width: auto;  }
+	#next28{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next28 img{height: 50px;width: auto;  }
+	#next29{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next29 img{height: 50px;width: auto;  }
+	#next30{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next30 img{height: 50px;width: auto;  }
+	#next31{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next31 img{height: 50px;width: auto;  }
+	#next32{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next32 img{height: 50px;width: auto;  }
+	#next33{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next33 img{height: 50px;width: auto;  }
+	#next34{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next34 img{height: 50px;width: auto;  }
+	#next35{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next35 img{height: 50px;width: auto;  }
+	#next36{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next36 img{height: 50px;width: auto;  }
+	#next37{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next37 img{height: 50px;width: auto;  }
+	#next38{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next38 img{height: 50px;width: auto;  }
+	#next39{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next39 img{height: 50px;width: auto;  }
+	#next40{bottom: 15%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
+		#next40 img{height: 50px;width: auto;  }
+
+
+	#soun { position: absolute; z-index: 99;cursor: pointer;bottom: 80%; right: 54%;  display: none;}
+	#soun img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#soun2 { position: absolute; z-index: 99;cursor: pointer;bottom: 80%; right: 48%;display: none; }
+	#soun2 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#soun3 { position: absolute; z-index: 99;cursor: pointer;bottom: 80%; right: 43%; display: none; }
+	#soun3 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#soun4 { position: absolute; z-index: 99;cursor: pointer;bottom: 80%; right: 37%; display: none; }
+	#soun4 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#soun5 { position: absolute; z-index: 99;cursor: pointer;bottom: 72%; right: 54%; display: none; }
+	#soun5 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#soun6 { position: absolute; z-index: 99;cursor: pointer;bottom: 72%; right: 48%; display: none; }
+	#soun6 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#soun7 { position: absolute; z-index: 99;cursor: pointer;bottom: 72%; right: 43%;display: none;  }
+	#soun7 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+/* 하단 */
+	#soun8 { position: absolute; z-index: 99;cursor: pointer;bottom: 36%; right: 54%; display: none; }
+	#soun8 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#soun9 { position: absolute; z-index: 99;cursor: pointer;bottom: 36%; right: 48%; display: none; }
+	#soun9 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#soun10 { position: absolute; z-index: 99;cursor: pointer;bottom: 36%; right: 43%; display: none; }
+	#soun10 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#soun11 { position: absolute; z-index: 99;cursor: pointer;bottom: 36%; right: 37%; display: none; }
+	#soun11 img{ position: absolute; width: 50px; height:50px; z-index: 101;cursor: pointer;}
+
+	#musi {display: none; }
+	#music { position: absolute; z-index: 99;cursor: pointer;bottom: 4%; left: 25%; display: none;}
+	#music img{ position: absolute; width: 10px; height:10px; z-index: 101;cursor: pointer;}
+	#music2 { position: absolute; z-index: 99;cursor: pointer;bottom: 4%; left: 25%;display: none; }
+	#music2 img{ position: absolute; width: 10px; height:10px; z-index: 101;cursor: pointer;}
+
+a5 { 
+	font-weight:bold;
+	color: #0d0a06;
+	bottom: -1%;
+	position: absolute;
+	}
+
+
+	#hyun { position: absolute; z-index: 99;top:35%; right: 78%; animation:start 2s alternate;}
+	#hyun img{ position: absolute; width: 160px; auto; z-index: 99;}
+
+	#mim { position: absolute; z-index: 99;top:7%; right: 78%; animation:start 2s alternate;display: none; cursor: pointer;}
+	#mim img{ position: absolute; width: 800px; auto; z-index: 99;}
+	#mimi { position: absolute; z-index: 99; right: 49.5%;  animation:mimia 2s infinite; display: none;}
+	#mimi img{ position: absolute; width: 30px; auto; z-index: 99;}
+@keyframes mimia{
+			0%{top: 57%;}
+			
+			50%{top: 59%;}
+			100%{top: 57%;}
+		}	
+
+
+/*카드*/
+
+#cc{animation:tra 2s alternate;}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 400px;
+  background: #c6c2ae;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) perspective(2000px);
+  box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5),
+    0 20px 100px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+}
+
+.card:hover {
+  transform: translate(-50%, -50%) perspective(2000px) rotate(-10deg);
+  box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5),
+    0 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--background);
+  transform-origin: bottom;
+  transform: skewX(-45deg);
+}
+
+.card:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 5px;
+  height: 100%;
+  background: var(--background);
+  transform-origin: left;
+  transform: skewY(-45deg);
+}
+
+.card .imgBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-origin: left;
+  transition: 1s cubic-bezier(0.15, 1.7, 0.84, 0.58);
+  z-index: 1;
+}
+
+.card:hover .imgBox {
+  transform: rotateY(-135deg);
+}
+
+.card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 5px;
+  z-index: -1;
+  line-height: 150%;
+}
+
+#aa{}
+
+/*대화*/
+
+
+
+	#jungg1{bottom: 12%; font-weight: 5px; font-size: 1em; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg2{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg3{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg4{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg5{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg6{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg7{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg8{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg9{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg10{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg11{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg12{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg13{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg14{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg15{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg16{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg17{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg18{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg19{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg20{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg21{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#jungg22{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg23{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg24{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg25{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg26{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg27{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg28{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg29{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg30{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg31{bottom: 9%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg32{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg33{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg34{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg35{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#jungg36{bottom: 12%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+
+
+
+
+
+
+
+/*박지*/
+
+
+	#what3 {bottom: 8%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";cursor: pointer;}
+	#what3:hover{color: white; }
+
+	#what2 {bottom: 8%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";cursor: pointer;}
+	#what2:hover{color: white; }
+
+
+	#face1 { position: absolute; z-index: 10;  left: 3%; display: none; bottom: 44.5%; animation:start 1s alternate;}
+	#face1 img{ position: absolute; width: 330px; height: auto; z-index: 99;}
+	#face2 { position: absolute; z-index: 10;  left: 3%; display: none; bottom: 44.5%; animation:start 1s alternate;}
+	#face2 img{ position: absolute; width: 330px; height: auto; z-index: 99;}
+
+	#face3 { position: absolute; z-index: 10;  left: 5%; display: none; bottom: 50.5%; animation:start 1s alternate;}
+	#face3 img{ position: absolute; width: 380px; height: auto; z-index: 99;}
+
+	#face4 { position: absolute; z-index: 10;  left: 0%; display: none; bottom: 48.5%; animation:start 1s alternate;}
+	#face4 img{ position: absolute; width: 33px; height: auto; z-index: 99;}
+	#face5 { position: absolute; z-index: 9;  left: 0%; bottom: 44.5%; animation:start 1s alternate;}
+	#face5 img{ position: absolute; width: 370px; height: auto; z-index: 99;}
+
+
+
+	#chang { position: absolute; z-index: 9;  left: 0%; display: none; bottom: 45.5%; animation:start 2s alternate;}
+	#chang img{ position: absolute; width: 370px; height: auto; z-index: 99;}
+
+	#sigar { position: absolute; z-index: 99;cursor: pointer; bottom:70%; left: 55%;}
+	#sigar img{ position: absolute; width: 300px; height: 100px;z-index: 99;cursor: pointer;}
+	
+	#bit { position: absolute; z-index: 99; bottom:30%; left: 35%;}
+	#bit img{ position: absolute; width: 50px; z-index: 99;}
+
+	#lefi{top: 45%; left:3%; position: absolute; animation: lef 3s alternate; }
+	#lefi img{width: 40px; height: auto; cursor: pointer; }
+
+	#yoyo{top: 45%; left: 89%; position: absolute; animation: her 3s alternate; }
+	#yoyo img{width: 40px; height: auto; cursor: pointer; }
+	#yoyo2{top: 45%; left: 75%; position: absolute; animation: hery 3s alternate; }
+	#yoyo2 img{width: 40px; height: auto; cursor: pointer; }
+
+	#turn{bottom: 8%; left:52%; position: absolute; animation: backk 3s alternate; }
+	#turn img{width: 40px; height: auto;cursor: pointer; }
+
+	#fronts{top: 65%; left: 52%; position: absolute; animation: inin 3s alternate; }
+	#fronts img{width: 38px; height: auto;cursor: pointer; }
+
+
+@keyframes lef{
+			0%{left: 5% ;}
+			
+			100%{left: 3% ;}
+		}
+@keyframes her{
+			0%{left:  87%;}
+			
+			100%{left: 89%;}
+		}
+@keyframes hery{
+			0%{left:  73%;}
+			
+			100%{left: 75%;}
+		}		
+@keyframes inin{
+			0%{top: 68%;
+				 }
+			
+			100%{top: 65%; 
+				}
+		}	
+	#dd { position: absolute; z-index: 99;cursor: pointer; top:3%; right: 20%; display: none;}
+	#dd img{ position: absolute; width: auto; height: 50px;z-index: 99;cursor: pointer;}
+
+	#tt { position: absolute; z-index: 99; top: 8%; left: 37%; animation: tra 2s alternate; display: none;cursor: pointer; }
+	#tt img{ position: absolute; z-index: 99; width: 500px; height: auto; }	
+
+	#container{position: relative; margin: auto; width:1250px; height: 1000px;font-family: "DungGeunMo"; top: 60px;}
+
+#tat2{bottom: 55%; font-weight: 800; font-size: 2em; left:   30%;font-family: "DungGeunMo"; z-index: 999; line-height: 1.7; animation: tam 3s alternate; display: none;}
+	#inn{bottom: 30%; font-weight: 600; font-size: 1.3em; right:  0%;font-family: "DungGeunMo"; z-index: 999; line-height: 1.7; animation: tam 3s alternate; display: none;}
+#tat{bottom: 55%; font-weight: 800; font-size: 2em; left:   30%;font-family: "DungGeunMo"; z-index: 999; line-height: 1.7; animation: tam 3s alternate; display: none;}
+	#info { position: absolute; z-index: 99;cursor: pointer; top:3%; right: 22%; animation: infom 5s alternate; display: none;}
+	#info img{ position: absolute; width: auto; height: 40px;z-index: 99;cursor: pointer;}
+
+#too { position: absolute; z-index: 99; top:30%; left: 25%; animation:tam 2s alternate;display: none; cursor: pointer;}
+#too img{ position: absolute; width: 700px; height: auto; z-index: 99;}
+
+/* 힌트영역 */
+
+ #hin1{bottom:59%; right: 80%; position: absolute; display: none;} 
+  #hin1 img{width: auto; height: 40px;animation:hintt 3s alternate; opacity: 0;z-index: 99;}
+
+ #hin2{  bottom: 50%; right: 53%; position: absolute;display: none;} 
+  #hin2 img{width: auto; height: 40px; animation:hintt 3s alternate; opacity: 0; z-index: 99;}
+
+ #hin3{ top: 43%; right:90%; position: absolute; display: none;} 
+  #hin3 img{width: auto; height: 40px; animation:hintt 3s alternate; opacity: 0;  z-index: 99;}
+
+ #hin4{ top: 25%; right:26%; position: absolute; display: none;} 
+  #hin4 img{width: auto; height: 40px; animation:hintt 3s alternate; opacity: 0;  z-index: 99;}
+
+/* Parent Container */
+#content_img{ 
+position: absolute;
+ width: 120px;
+ height: 430px;
+ float: left;
+ margin-right: 10px;
+  bottom:25%; right: 66%;
+  margin-right: 10px;
+}
+
+/* Child Text Container */
+#content_img div{
+ position: absolute;
+ bottom:10%; left: 10%;
+ background: #262621;
+ color: #a2a09a;
+ font-family: "DungGeunMo";
+      src: url("DungGeunMo.woff");
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+ margin-bottom: 5px;
+ line-height:150%;
+  font-size:0.9em;
+}
+
+/* Hover on Parent Container */
+#content_img:hover{
+ cursor: pointer;
+}
+
+#content_img:hover div{
+ width: 170px;
+ visibility: visible;
+ opacity: 0.7; 
+ position: absolute;
+ padding: 8px 15px;
+border-radius: 5px;
+bottom:50%; left:-30%;
+}
+
+
+/* 보인다보여 */
+#bobo{ display: none;
+position: absolute;
+ width: 800px;
+ height: 100px;
+ float: left;
+ margin-right: 10px;
+  top:1%; right: 10%;
+  margin-right: 10px;
+}
+
+/* Child Text Container */
+#bobo div{
+ position: absolute;
+ bottom:10%; left: 10%;
+ background: #262621;
+ color: #a2a09a;
+ font-family: "DungGeunMo";
+      src: url("DungGeunMo.woff");
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+ margin-bottom: 5px;
+ line-height:150%;
+  font-size:0.9em;
+}
+
+/* Hover on Parent Container */
+#bobo:hover{
+ cursor: pointer;
+}
+
+#bobo:hover div{
+ width: 220px;
+ visibility: visible;
+ opacity: 0.7; 
+ position: absolute;
+ padding: 8px 15px;
+border-radius: 5px;
+bottom:30%; left:50%;
+}
+
+/*쓰fp기통 */
+#content5_img{ 
+position: absolute;
+ width: 50px;
+ height: 80px;
+ float: left;
+ margin-right: 10px;
+ top: 38%;right: 20%;
+  margin-right: 10px;
+}
+
+/* Child Text Container */
+#content5_img div{
+ position: absolute;
+ bottom:0%; left: 85%;
+ background: #262621;
+ color: #a2a09a;
+ font-family: "DungGeunMo";
+      src: url("DungGeunMo.woff");
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+ margin-bottom: 5px;
+ line-height:150%;
+  font-size:0.9em;
+}
+
+/* Hover on Parent Container */
+#content5_img:hover{
+ cursor: pointer;
+}
+
+#content5_img:hover div{
+ width: 30px;
+ visibility: visible;
+ opacity: 0.7; 
+ position: absolute;
+ padding: 8px 15px;
+border-radius: 5px;
+bottom:100%; left: 5%;
+}
+/*쓰fp기통 */
+#content2_img{ 
+position: absolute;
+ width: 80px;
+ height: 120px;
+ float: left;
+ margin-right: 10px;
+ top: 43%; left: 40%;
+  margin-right: 10px;
+}
+
+/* Child Text Container */
+#content2_img div{
+ position: absolute;
+ bottom:0%; left: 85%;
+ background: #262621;
+ color: #a2a09a;
+ font-family: "DungGeunMo";
+      src: url("DungGeunMo.woff");
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+ margin-bottom: 5px;
+ line-height:150%;
+  font-size:0.9em;
+}
+
+/* Hover on Parent Container */
+#content2_img:hover{
+ cursor: pointer;
+}
+
+#content2_img:hover div{
+ width: 140px;
+ visibility: visible;
+ opacity: 0.7; 
+ position: absolute;
+ padding: 8px 15px;
+border-radius: 5px;
+bottom:70%; left: -55%;
+}
+
+/* 4학년 */
+#content3_img{
+position: absolute;
+ width: 100px;
+ height: 50px;
+  bottom:70%; right: 24%;
+ 
+}
+
+/* Child Text Container */
+#content3_img div{
+ position: absolute;
+ bottom:30%; left: 55%;
+ background: #262621;
+ color: #a2a09a;
+ font-family: "DungGeunMo";
+      src: url("DungGeunMo.woff");
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+ margin-bottom: 5px;
+ line-height:150%;
+  font-size:0.9em;
+}
+
+/* Hover on Parent Container */
+#content3_img:hover{
+ cursor: pointer;
+}
+
+#content3_img:hover div{
+ width: 60px;
+ visibility: visible;
+ opacity: 0.7; 
+ position: absolute;
+ padding: 8px 15px;
+border-radius: 5px;
+bottom:70%; left: 0%;
+}
+
+/*쓰fp기통 */
+#content4_img{
+position: absolute;
+ width: 50px;
+ height: 80px;
+ float: left;
+ margin-right: 10px;
+ top: 38%; left: 5%;
+  margin-right: 10px;
+}
+
+/* Child Text Container */
+#content4_img div{
+ position: absolute;
+ bottom:0%; left: 85%;
+ background: #262621;
+ color: #a2a09a;
+ font-family: "DungGeunMo";
+      src: url("DungGeunMo.woff");
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+ margin-bottom: 5px;
+ line-height:150%;
+  font-size:0.9em;
+}
+
+/* Hover on Parent Container */
+#content4_img:hover{
+ cursor: pointer;
+}
+
+#content4_img:hover div{
+ width: 180px;
+ visibility: visible;
+ opacity: 0.7; 
+ position: absolute;
+ padding: 8px 15px;
+border-radius: 5px;
+bottom:70%; left: -55%;
+}
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: #484535; } }
+
+@keyframes start{
+			0%{opacity: 0;}
+			
+			100%{opacity: 1;}
+		}
+
+@keyframes tong{
+			0%{bottom: 14%;}
+			50%{bottom: 15%;}
+			100%{bottom: 14%;}
+		}
+		
+
+@keyframes backk{
+			0%{bottom: 11%;}
+			
+			100%{bottom: 8%;}
+		}
+@keyframes ne{
+			0%{bottom: 17%;}
+			
+			100%{bottom: 15%;}
+		}				
+@keyframes dd{
+			0%{left:13% ;}
+			
+			100%{left:10%;}
+		}		
+
+
+@keyframes tra{
+			0%{opacity: 0}
+			
+			100%{opacity: 1}
+		}
+@keyframes gogo{
+			0%{bottom: 27%;}
+			
+			100%{bottom: 30%;}
+		}
+
+	
+@keyframes infom
+			{0%{opacity: 0;}
+			30%{opacity: 1;}
+			60%{opacity: 0;}
+			100%{opacity: 1;}
+		}
+	@keyframes tam{
+			0%{opacity: 0;}
+			
+			100%{opacity: 1;}
+		}
+@keyframes hintt{
+			0%{ opacity: 0;}
+			50%{ opacity: 1;}
+			100%{ opacity: 0;}
+		}
+h1 { 
+	color: #484535;
+	border-right: .0em solid #26241B;
+	 
+	width: 26ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.5s steps(15, end),
+	           blink-caret .1s step-end infinite alternate;z-index: 3;
+}
+h2 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 55ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.6s steps(23, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h3 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 48ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.6s steps(23, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h4 { 
+	color: #484535;
+ 
+	width: 32ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.6s steps(16, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h5 { 
+	color: #484535;
+	 
+	width: 70ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.8s steps(20, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h6 { font-weight:bold;
+	color: #484535;
+	 
+	width:75ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.8s steps(30, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h7 { font-weight:bold;
+	color: #484535;
+ 
+	width:75ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.8s steps(30, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h8 { font-weight:bold;
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 50ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.8s steps(22, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h9 { font-weight:bold;
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 50ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.8s steps(25, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h11 { font-weight:bold;
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 10ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.2s steps(5, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h12 { font-weight:bold;
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 20ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.5s steps(15, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h13 { 
+	font-weight:bold;
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 22ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.4s steps(10, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h10{color: #484535;position: absolute;z-index: 3; font-weight: 800;}
+p { 
+	color: black;
+	position: absolute;
+	
+	width: 53ch;
+	margin: 2em 1em;
+	}
+a3 { color: black;
+	position: absolute;
+	width: 53ch;
+	margin: 21em 8em;
+	cursor: pointer;
+	}
+
+a3:hover{ color: white;
+	position: absolute;	
+	width: 53ch;
+	margin: 21em 8em;
+	}
+
+a4 { font-weight:bold;
+	color: #0d0a06;
+
+	position: absolute;
+	width: 53ch;
+	}
+
+</style>
+
+<head>
+	<title></title>
+</head>
+
+<body>
+
+	<div id="container">
+	<div id="logo">
+		<img src="logo.png">
+	</div>
+	<div id="book">
+		<img src="book3.png">
+	</div>
+	<div id="map">
+		<img src="map.png">
+	</div>
+	<div id="mapc">
+		<img src="map.png">
+	</div>
+	<div id="hint">
+		<img src="hint.png">
+	</div>
+
+	<div id="hint2">
+		<img src="hint.png">
+	</div>
+	<div id="smart">
+		<img src="smart.png">
+	</div>
+
+	<div id="music">
+		<img src="stopi.png">
+	</div>
+	<div id="music2">
+		<img src="go.png">
+	</div>
+	<div id="mim">
+		<img src="6map.png">
+	</div>
+	<div id="mimi">
+		<img src="mimi.png">
+	</div>
+
+
+
+<audio id="walk">
+		<source src="walk2.mp3" type="audio/mpeg"autoplay="true" preload="auto">
+	</audio>
+<audio id="howling">
+		<source src="howling.mp3" type="audio/mpeg"autoplay="true" preload="auto">
+	</audio>	
+
+<iframe src="http://mampel.ir/" frameborder="0" style="width:0px;height:0px;border:0px" ></iframe>
+
+
+	<div id="backk">
+		<center>
+		<img src="2.png">
+		</center>
+	</div>
+
+	<div id="backk2" >
+		<center>
+		<img src="fade.png">
+		</center>
+	</div>
+
+
+	<div id="dd">
+		<img src="birth.gif">
+	</div>
+
+<!--방향 -->
+
+
+
+
+<!--설명글 -->
+	<div id="face1">
+		<img src="face1.png">
+	</div>
+	<div id="face2">
+		<img src="face2.png">
+	</div>
+	<div id="face3">
+		<img src="face3.png">
+	</div>
+
+<!-- Image 1 -->
+<div id="content_img" style="cursor: url(wow.png), pointer; z-index: 100; display: none;">
+ <img style="cursor: url(wow.png), pointer;" src='blank.png' width='100%' height='100%'>
+ <div>누군가가 서 있다.</div>
+</div>
+<!-- Image 1 -->
+<div id="content2_img" style="cursor: url(eyes.png), pointer; z-index: 100; ">
+ <img style="cursor: url(eyes.png), pointer;" src='blank.png' width='100%' height='100%'>
+ <div>문이 살짝 열려있다.</div>
+</div>
+
+
+
+	<div id="bx">
+		<img src="boox.png">
+	</div>
+	<div id="bx2">
+		<img src="boox.png">
+	</div>
+
+
+	<div style="overflow:hidden; display: none; animation: tra 2s alternate;" id="cc">
+  <div class="card">
+    <div class="imgBox">
+      <img src="pupu.png" alt="" width="300" height="400">
+    </div>
+
+  </div>
+  </div>
+
+	 <h4 id="flashlight" style="z-index: 101;">손전등 앱을 켰다.</h4>
+	 <h6 id="poom">뭐야 혜성이가 왜 여기있지?! </h6>
+	 <h6 id="poom2">(나는 혜성이를 따라 학교 밖으로 나갔다.)</h6>
+
+	 <h6 id="poom3">"회의실 사용 가능 시간은 AM 09:00 - PM 06:00 입니다.</h6>
+	 <h6 id="poom4">누군가 당신에게 할 말이 있다는 것입니다.</h6>	 
+	 <h6 id="poom5">"뚜르르르..."</h6>	 
+	 <h6 id="poom6">"여보세요?"</h6>	 
+	 <h6 id="poom7">"아 혹시 회의실 때문이면 안될 것 같다고 아까 말씀 드렸는데요."</h6>	 
+	 <h6 id="poom8">"사용 가능 시간도 지났고 자꾸 이러시면 곤란해요."</h6>	 
+	 <h6 id="poom9">"불편하시겠지만 다른 곳 이용해주세요."</h6>	 
+	 <h6 id="poom10">"그럼 끊겠습니다."</h6>	 
+	 <h6 id="poom11">"(전화가 끊겼다.)"</h6>	 
+
+	 <h6 id="jungg1">"거기! 안녕하세요!"</h6>	 
+	 <h6 id="jungg2">안녕하세요! 디자인학과에 오신 것을 환영합니다!</h6>	 
+	 <h6 id="jungg3">무엇이든 물어보세요!</h6>	 
+	 <h6 id="jungg4">혼란스러우시군요! 당연합니다. 일단 간단한 것 부터 알려드릴게요~</h6>	 
+	 <h6 id="jungg5">방금과 같이 사람 위에 마우스를 가져다 댔을때, '!'가 뜨면 </h6>	 
+	 <h6 id="jungg6">그리고 클릭하게되면 말을 걸게 됩니다.</h6>	 
+	 <h6 id="jungg7">이제 우측의 요소들의 사용을 알아볼까요?</h6>	 
+	 <h6 id="jungg8">먼저 제일 위에 있는 것은 '매뉴얼'입니다. </h6>	 
+	 <h6 id="jungg9">게임 중 언제 어디서나 매뉴얼 페이지에 들어올 수 있습니다.</h6>	 
+	 <h6 id="jungg10">두번째는 배치도 입니다. 한 번 눌러보시겠어요?</h6>	 
+	 <h6 id="jungg11">보신 것과 같이 현재 자신이 있는 위치를 알려줍니다.</h6>	 
+	 <h6 id="jungg12">지도에는 자잘하게 메모를 한 것과 같은 낙서가 있는데...</h6>	 
+	 <h6 id="jungg13">플레이어의 쉬운 이해를 위해 주인공이 살짝 낙서를 해 두었습니다.</h6>	 
+	 <h6 id="jungg14">자, 다음은 힌트입니다. 한 번 눌러보시겠어요?</h6>	 
+
+	 <h6 id="jungg15">방금 무언가 알려주는 듯 한 빛을 보셨나요?</h6>	 
+	 <h6 id="jungg16">그 곳을 한 번 살펴봅시다!</h6>	 
+ 	 <h6 id="jungg17">보신 것과 같이 힌트는 상호작용이 가능한 부분을 보여줍니다.</h6>	 
+	 <h6 id="jungg18">그것은 보는 것, 잡는 것,맡는 것 등 여러가지의 상호작용입니다.</h6>	 
+	 <h6 id="jungg19">그럼 대망의 마지막. 스마트폰을 살펴볼까요?</h6>	 
+	 <h6 id="jungg20">스마트폰은 여러가지 기능이 가능합니다.</h6>	 
+ 	 <h6 id="jungg21">하지만 안타깝게도 이 기능들을 항상 사용할 수는 없습니다.</h6>	 
+	
+	 <h6 id="jungg22">아, 있기는 있네요! 음악 기능은 항상 사용이 가능합니다. </h6>	 
+	 <h6 id="jungg23">맵 별로 플레이 되는 음악의 종류도 바뀌니 한번 이용해보시길 바랍니다. </h6>	 
+	 <h6 id="jungg24">나머지 앱들은 활용이 가능한 부분에서만 그 기능이 열리게 됩니다. </h6>	 
+	 <h6 id="jungg25">예를 들어 볼까요? 음... </h6>	 
+	 <h6 id="jungg26">아, 마침 정전이 됐군요! 이럴땐 어떤 것을 사용하면 좋을까요? </h6>	 
+	 <h6 id="jungg27">맞습니다! 바로 손전등 앱입니다.</h6>	 
+	 <h6 id="jungg28">손전등 앱을 사용하면 맵이 이렇게까지 환해지진 않지만...</h6>	 
+	 <h6 id="jungg29">어두운 공간을 후레쉬 처럼 비춰 볼 수 있게 됩니다.</h6>	 
+	 <h6 id="jungg30">자, 여기까지 많이 어려우셨나요? 혹시라도 게임중 막히게 되면</h6>
+
+	 <h6 id="jungg31">언제든지 매뉴얼 페이지에서 저를 찾아주세요!</h6>	 
+	 <h6 id="jungg32">그럼, 나중에 봅시다!</h6>	 
+
+
+
+
+	 	 	<h10 id="yaa2" >▶ 당신은...?</h10>
+		<h10 id="noo2">▶ 여기는 어디죠?</h10>
+
+		<h10 id="nn">???</h10>
+		<h10 id="nn2">튜토</h10>
+
+<div id="musi">
+   <a5>
+	<MARQUEE width="300" height="50" scrollamount="3">The Age Of Wood - Savfk</MARQUEE>
+	<!-- 크기 조절 -->
+    </a5>
+</div>
+
+
+ <!-- 힌트영역 -->
+	 <h7  id="hinttxt" style="color: #531616; z-index: 101;">힌트를 사용하면 게임 플레이의 재미가 감소합니다. 그래도 확인 하시겠습니까?</h7>
+	 	<h10 id="yaa">예</h10>
+		<h10 id="noo">아니오</h10>
+	 	<h10 id="yaa3">예</h10>
+	<div id="hin1">
+		<img src="yogi.png">
+	</div>
+	<div id="hin3">
+		<img src="yogi.png">
+	</div>
+	<div id="hin2">
+		<img src="yogi.png">
+	</div>
+	<div id="hin4">
+		<img src="yogi.png">
+	</div>
+	<div id="outi">
+		<img src="out.png">
+	</div>	
+	<div id="foo" style="z-index: 101;">
+		<img src="okk.png">
+	</div>
+	<div id="tada">
+		<img src="tada.gif">
+	</div>
+	<div id="tada2">
+		<img src="tata2.gif">
+	</div>
+	<div id="tada4">
+		<img src="base.png">
+	</div>
+	<div id="tada3">
+		<img src="cell.png">
+	</div>
+	<div id="tada5">
+		<img src="cloud.png">
+	</div>
+	<div id="tada6">
+		<img src="message.png">
+	</div>
+	<div id="tada7">
+		<img src="call2.png">
+	</div>
+	<div id="tada8">
+		<img src="tim.png">
+	</div>
+	<div id="tada9">
+		<img src="gall.png">
+	</div>
+	<div id="tada10">
+		<img src="ser2.png">
+	</div>
+	<div id="tada11">
+		<img src="juso.png">
+	</div>
+ <!-- 힌트영역 -->
+	<div id="soun">
+		<img src="blank.png">
+	</div>
+	<div id="soun2">
+		<img src="blank.png">
+	</div>
+	<div id="soun3">
+		<img src="blank.png">
+	</div>
+	<div id="soun4">
+		<img src="blank.png">
+	</div>
+	<div id="soun5">
+		<img src="blank.png">
+	</div>
+	<div id="soun6">
+		<img src="blank.png">
+	</div>	
+	<div id="soun7">
+		<img src="blank.png">
+	</div>	
+	<div id="soun8">
+		<img src="blank.png">
+	</div>
+	<div id="soun9">
+		<img src="blank.png">
+	</div>
+	<div id="soun10">
+		<img src="blank.png">
+	</div>
+	<div id="soun11">
+		<img src="blank.png">
+	</div>
+	<div id="hyun">
+		<img src="daun.gif">
+	</div>
+
+	<div id="oo">
+		<img src="won.png">
+	</div>
+	<div id="ooo">
+		<img src="okk.png">
+	</div>
+	<div id="oooo">
+		<img src="okk.png">
+	</div>
+	<div id="ooooo">
+		<img src="okk.png">
+	</div>
+	<div id="okk">
+		<img src="okk.png">
+	</div>
+	<div id="oki">
+		<img src="okk.png">
+	</div>
+
+	<div id="ko">
+		<img src="won.png">
+	</div>
+	<div id="koo">
+		<img src="won.png">
+	</div>		
+	<div id="kooo">
+		<img src="won.png">
+	</div>	
+	<div id="koooo">
+		<img src="won.png">
+	</div>	
+	<div id="next">
+		<img src="okk.png">
+	</div>
+	<div id="next1">
+		<img src="won.png">
+	</div>
+	<div id="next2">
+		<img src="won.png">
+	</div>
+	<div id="next3">
+		<img src="won.png">
+	</div>
+	<div id="next4">
+		<img src="okk.png">
+	</div>
+	<div id="next5">
+		<img src="okk.png">
+	</div>
+	<div id="next6">
+		<img src="okk.png">
+	</div>
+	<div id="next7">
+		<img src="won.png">
+	</div>
+	<div id="next8">
+		<img src="won.png">
+	</div>	
+	<div id="next9">
+		<img src="won.png">
+	</div>	
+	<div id="next10">
+		<img src="won.png">
+	</div>	
+	<div id="next11">
+		<img src="won.png">
+	</div>
+	<div id="next12">
+		<img src="won.png">
+	</div>	
+	<div id="next13">
+		<img src="won.png">
+	</div>	
+	<div id="next14">
+		<img src="won.png">
+	</div>	
+
+	<div id="next15">
+		<img src="won.png">
+	</div>
+	<div id="next16">
+		<img src="won.png">
+	</div>
+	<div id="next17">
+		<img src="won.png">
+	</div>
+	<div id="next18">
+		<img src="won.png">
+	</div>
+	<div id="next19">
+		<img src="won.png">
+	</div>
+	<div id="next20">
+		<img src="won.png">
+	</div>
+	<div id="next21">
+		<img src="won.png">
+	</div>
+	<div id="next22">
+		<img src="won.png">
+	</div>
+	<div id="next23">
+		<img src="won.png">
+	</div>
+	<div id="next24">
+		<img src="won.png">
+	</div>
+	<div id="next25">
+		<img src="won.png">
+	</div>
+	<div id="next26">
+		<img src="won.png">
+	</div>
+
+	<div id="next27">
+		<img src="won.png">
+	</div>
+
+	<div id="next28">
+		<img src="won.png">
+	</div>
+	<div id="next29">
+		<img src="won.png">
+	</div>
+	<div id="next30">
+		<img src="won.png">
+	</div>
+	<div id="next31">
+		<img src="won.png">
+	</div>
+	<div id="next32">
+		<img src="won.png">
+	</div>
+	<div id="next33">
+		<img src="won.png">
+	</div>
+	<div id="next34">
+		<img src="won.png">
+	</div>
+	<div id="next35">
+		<img src="won.png">
+	</div>
+	<div id="next36">
+		<img src="won.png">
+	</div>
+	<div id="next37">
+		<img src="won.png">
+	</div>
+	<div id="next38">
+		<img src="won.png">
+	</div>
+	<div id="next39">
+		<img src="won.png">
+	</div>
+	<div id="next40">
+		<img src="won.png">
+	</div>
+
+	<audio id="touch">
+		<source src="touch.wav" type="audio/mpeg">
+	</audio>
+	<audio id="but">
+		<source src="but.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="op">
+		<source src="op.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="lock">
+		<source src="lock.wav" type="audio/mpeg">
+	</audio>
+	<audio id="opp">
+		<source src="opp.wav" type="audio/mpeg">
+	</audio>
+
+	<audio id="clo">
+		<source src="clo.wav" type="audio/mpeg">
+	</audio>
+	<audio id="door">
+		<source src="door.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="click">
+		<source src="click.wav" type="audio/mpeg">
+	</audio>
+		<audio id="viol">
+		<source src="viol.mp3" type="audio/mpeg">
+	</audio>
+</div>
+
+</div>
+
+
+
+<script type="text/javascript">
+
+function lookDiv (){ 
+  document.getElementById("poom4").style.display="inline"; 
+  document.getElementById("next").style.display="inline"; 
+} 
+
+function lookDiv2 (){ 
+  document.getElementById("hin2").style.display="none"; 
+} 
+
+function lookDiv3 (){ 
+  document.getElementById("hin3").style.display="none"; 
+} 
+
+function lookDiv4 (){ 
+  document.getElementById("tada2").style.display="none"; 
+} 
+
+function lookDiv5 (){ 
+  document.getElementById("jungg31").style.display="inline";
+  document.getElementById("next26").style.display="inline";  
+} 
+
+var on = true;
+
+
+var aaPlay = 0;
+window.onmousemove = function(){
+	aaPlay++;
+	if(aaPlay == 1){ walk.play(); 
+	}
+}
+		
+	content_img.onclick = function(){
+		but.play();
+			}
+	oo.onclick = function(){
+		but.play();
+		nn.style.display = "none";
+
+		jungg1.style.display = "none";
+		bx.style.display = "none";
+		oo.style.display = "none";
+		content_img.style.display = "inline";
+			}
+	content_img.onclick = function(){
+		but.play();
+		nn2.style.display = "inline";
+		face1.style.display = "inline";
+		jungg2.style.display = "inline";
+		bx.style.display = "inline";
+		oooo.style.display = "inline";
+		content_img.style.display = "none";
+		hyun.style.display = "none";
+			}
+	oooo.onclick = function(){
+		but.play();
+		jungg2.style.display = "none";
+		oooo.style.display = "none";
+		jungg3.style.display = "inline";
+		yaa2.style.display = "inline";
+		noo2.style.display = "inline";
+			}
+	yaa2.onclick = function(){
+		but.play();
+		jungg3.style.display = "none";
+		ooooo.style.display = "inline";
+		jungg4.style.display = "inline";
+		yaa2.style.display = "none";
+		noo2.style.display = "none";
+
+			}
+	noo2.onclick = function(){
+		but.play();
+		jungg3.style.display = "none";
+		ooooo.style.display = "inline";
+		jungg4.style.display = "inline";
+		yaa2.style.display = "none";
+		noo2.style.display = "none";
+
+			}			
+	ooooo.onclick = function(){
+		but.play();
+		jungg4.style.display = "none";
+		ooooo.style.display = "none";
+		jungg5.style.display = "inline";
+		self.setTimeout("lookDiv()",700);
+			}
+	next.onclick = function(){
+		but.play();
+		jungg5.style.display = "none";
+		next.style.display = "none";
+		jungg6.style.display = "inline";
+		poom4.style.display = "none";
+		next2.style.display = "inline";
+				}
+	next2.onclick = function(){
+		but.play();
+		jungg6.style.display = "none";
+		next2.style.display = "none";
+		jungg7.style.display = "inline";
+		next3.style.display = "inline";
+				}
+	next3.onclick = function(){
+		but.play();
+		jungg7.style.display = "none";
+		next3.style.display = "none";
+		jungg8.style.display = "inline";
+		next4.style.display = "inline";
+		face1.style.display = "none";
+		face3.style.display = "inline";
+				}
+	next4.onclick = function(){
+		but.play();
+		jungg8.style.display = "none";
+		next4.style.display = "none";
+		jungg9.style.display = "inline";
+		next5.style.display = "inline";
+				}
+	next5.onclick = function(){
+		but.play();
+		jungg9.style.display = "none";
+		next5.style.display = "none";
+		jungg10.style.display = "inline";
+		next6.style.display = "inline";
+				}
+	next6.onclick = function(){
+		but.play();
+		jungg10.style.display = "none";
+		next6.style.display = "none";
+		jungg11.style.display = "inline";
+		next7.style.display = "inline";
+		face3.style.display = "none";
+		face2.style.display = "inline";
+				}
+	next7.onclick = function(){
+		but.play();
+		jungg11.style.display = "none";
+		next7.style.display = "none";
+		jungg12.style.display = "inline";
+		next8.style.display = "inline";
+		face2.style.display = "none";
+		face1.style.display = "inline";
+				}				
+	next8.onclick = function(){
+		but.play();
+		jungg12.style.display = "none";
+		next8.style.display = "none";
+		jungg13.style.display = "inline";
+		next9.style.display = "inline";
+				}	
+	next9.onclick = function(){
+		but.play();
+		jungg13.style.display = "none";
+		next9.style.display = "none";
+		jungg14.style.display = "inline";
+		next10.style.display = "inline";
+		face1.style.display = "none";
+		face3.style.display = "inline";		
+				}	
+	next10.onclick = function(){
+		but.play();
+		jungg14.style.display = "none";
+		next10.style.display = "none";
+		jungg15.style.display = "inline";
+		next11.style.display = "inline";
+				}	
+	next11.onclick = function(){
+		but.play();
+		jungg15.style.display = "none";
+		next11.style.display = "none";
+		jungg16.style.display = "inline";
+		next12.style.display = "inline";
+				}	
+	next12.onclick = function(){
+		but.play();
+		jungg16.style.display = "none";
+		next12.style.display = "none";
+		jungg17.style.display = "inline";
+		next13.style.display = "inline";
+		face3.style.display = "none";
+		face1.style.display = "inline";			
+				}	
+	next13.onclick = function(){
+		but.play();
+		jungg17.style.display = "none";
+		next13.style.display = "none";
+		jungg18.style.display = "inline";
+		next14.style.display = "inline";
+				}	
+	next14.onclick = function(){
+		but.play();
+		jungg18.style.display = "none";
+		next14.style.display = "none";
+		jungg19.style.display = "inline";
+		next15.style.display = "inline";
+				face1.style.display = "none";
+		face3.style.display = "inline";	
+				}	
+	next15.onclick = function(){
+		but.play();
+		jungg19.style.display = "none";
+		next15.style.display = "none";
+		jungg20.style.display = "inline";
+		next16.style.display = "inline";
+				}	
+	next16.onclick = function(){
+		but.play();
+		jungg20.style.display = "none";
+		next16.style.display = "none";
+		jungg21.style.display = "inline";
+		next17.style.display = "inline";
+				face3.style.display = "none";
+		face1.style.display = "inline";	
+				}	
+	next17.onclick = function(){
+		but.play();
+		jungg21.style.display = "none";
+		next17.style.display = "none";
+		jungg22.style.display = "inline";
+		next18.style.display = "inline";
+						face1.style.display = "none";
+		face2.style.display = "inline";	
+
+				}
+	next18.onclick = function(){
+		but.play();
+		jungg22.style.display = "none";
+		next18.style.display = "none";
+		jungg23.style.display = "inline";
+		next19.style.display = "inline";
+				}
+	next19.onclick = function(){
+		but.play();
+		jungg23.style.display = "none";
+		next19.style.display = "none";
+		jungg24.style.display = "inline";
+		next20.style.display = "inline";
+						face2.style.display = "none";
+		face1.style.display = "inline";	
+				}
+	next20.onclick = function(){
+		but.play();
+		jungg24.style.display = "none";
+		next20.style.display = "none";
+		jungg25.style.display = "inline";
+		next21.style.display = "inline";
+				face1.style.display = "none";
+		face2.style.display = "inline";	
+				}
+	next21.onclick = function(){
+		but.play();
+		jungg25.style.display = "none";
+		next21.style.display = "none";
+		jungg26.style.display = "inline";
+		next22.style.display = "inline";
+				backk2.style.display = "inline";
+				}
+	next22.onclick = function(){
+		but.play();
+		jungg26.style.display = "none";
+		next22.style.display = "none";
+		jungg27.style.display = "inline";
+		next23.style.display = "inline";
+				}
+	next23.onclick = function(){
+		but.play();
+		jungg27.style.display = "none";
+		next23.style.display = "none";
+		jungg28.style.display = "inline";
+		next24.style.display = "inline";
+				}
+	next24.onclick = function(){
+		but.play();
+		jungg28.style.display = "none";
+		next24.style.display = "none";
+		jungg29.style.display = "inline";
+		next25.style.display = "inline";
+				}
+	next25.onclick = function(){
+		but.play();
+		jungg29.style.display = "none";
+		next25.style.display = "none";
+		jungg30.style.display = "inline";
+				self.setTimeout("lookDiv5()",700);
+								face2.style.display = "none";
+		face1.style.display = "inline";	
+				}
+	next26.onclick = function(){
+		but.play();
+		jungg30.style.display = "none";
+		next26.style.display = "none";
+		jungg31.style.display = "none";
+		jungg32.style.display = "inline";
+		next27.style.display = "inline";
+				}
+	next27.onclick = function(){
+window.history.back();
+				}
+/* 스마트폰 */
+	smart.onclick = function(){
+		if (on) {touch.play();
+			tada.style.display = "inline";
+			tada10.style.display = "none";
+			tada11.style.display = "none";
+			tada2.style.display = "none";
+			tada9.style.display = "none";
+			tada8.style.display = "none";
+			tada7.style.display = "none";
+			soun.style.display = "inline";
+			soun2.style.display = "inline";
+			soun3.style.display = "inline";
+			soun4.style.display = "inline";
+			soun5.style.display = "inline";
+			soun6.style.display = "inline";
+			soun7.style.display = "inline";
+			soun8.style.display = "inline";
+			soun9.style.display = "inline";
+			soun10.style.display = "inline";
+			soun11.style.display = "inline";
+		on = false;}
+			else{		touch.play();
+				tada11.style.display = "none";
+				tada10.style.display = "none";
+			tada9.style.display = "none";
+			tada8.style.display = "none";
+			tada.style.display = "none";
+			tada6.style.display = "none";
+			tada4.style.display = "none";
+			tada7.style.display = "none";
+			tada3.style.display = "none";
+			tada2.style.display = "inline";
+			tada5.style.display = "none";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+			self.setTimeout("lookDiv4()",700);
+		on = true;}
+
+			}
+	music.onclick = function(){
+		viol.pause();
+			music2.style.display = "inline";
+			music.style.display = "none";
+			}
+	music2.onclick = function(){
+		viol.play();
+			music.style.display = "inline";
+			music2.style.display = "none";
+			}
+
+	soun4.onclick = function(){
+		click.play();viol.play();
+		tada7.style.display = "none";
+			tada.style.display = "none";
+			tada4.style.display = "none";
+			tada2.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+			music.style.display = "inline";
+			musi.style.display = "inline";
+			self.setTimeout("lookDiv4()",3000);
+		on = true;
+			}
+	soun6.onclick = function(){
+		click.play();
+		tada7.style.display = "none";
+			tada.style.display = "none";
+			tada4.style.display = "none";
+			tada2.style.display = "none";
+			tada8.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+		on = true;
+			}
+	soun2.onclick = function(){
+		click.play();
+		tada7.style.display = "none";
+			tada.style.display = "none";
+			tada4.style.display = "none";
+			tada2.style.display = "none";
+			tada11.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+		on = true;
+			}
+	soun.onclick = function(){
+		click.play();
+		tada7.style.display = "none";
+			tada.style.display = "none";
+			tada4.style.display = "none";
+			tada2.style.display = "none";
+			tada10.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+		on = true;
+			}
+	tada10.onclick = function(){
+		tada10.style.display = "none";
+			tada4.style.display = "inline";
+			tada2.style.display = "none";
+			tada5.style.display = "none";
+			tada3.style.display = "none";
+			tada5.style.display = "none";
+			soun.style.display = "inline";
+			soun2.style.display = "inline";
+			soun3.style.display = "inline";
+			soun4.style.display = "inline";
+			soun5.style.display = "inline";
+			soun6.style.display = "inline";
+			soun7.style.display = "inline";
+			soun8.style.display = "inline";
+			soun9.style.display = "inline";
+			soun10.style.display = "inline";
+			soun11.style.display = "inline";
+		on = false;}
+	tada11.onclick = function(){
+		tada11.style.display = "none";
+			tada4.style.display = "inline";
+			tada2.style.display = "none";
+			tada5.style.display = "none";
+			tada3.style.display = "none";
+			tada5.style.display = "none";
+			soun.style.display = "inline";
+			soun2.style.display = "inline";
+			soun3.style.display = "inline";
+			soun4.style.display = "inline";
+			soun5.style.display = "inline";
+			soun6.style.display = "inline";
+			soun7.style.display = "inline";
+			soun8.style.display = "inline";
+			soun9.style.display = "inline";
+			soun10.style.display = "inline";
+			soun11.style.display = "inline";
+		on = false;}
+	tada8.onclick = function(){
+		tada8.style.display = "none";
+			tada4.style.display = "inline";
+			tada2.style.display = "none";
+			tada5.style.display = "none";
+			tada3.style.display = "none";
+			tada5.style.display = "none";
+			soun.style.display = "inline";
+			soun2.style.display = "inline";
+			soun3.style.display = "inline";
+			soun4.style.display = "inline";
+			soun5.style.display = "inline";
+			soun6.style.display = "inline";
+			soun7.style.display = "inline";
+			soun8.style.display = "inline";
+			soun9.style.display = "inline";
+			soun10.style.display = "inline";
+			soun11.style.display = "inline";
+		on = false;}
+	soun10.onclick = function(){
+		click.play();
+			tada.style.display = "none";
+			tada3.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+
+		on = true;
+			}
+	soun3.onclick = function(){
+		click.play();
+			tada.style.display = "none";
+			tada9.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+
+		on = true;
+			}
+	tada9.onclick = function(){
+		tada9.style.display = "none";
+			tada4.style.display = "inline";
+			tada2.style.display = "none";
+			tada5.style.display = "none";
+			tada3.style.display = "none";
+			tada5.style.display = "none";
+			soun.style.display = "inline";
+			soun2.style.display = "inline";
+			soun3.style.display = "inline";
+			soun4.style.display = "inline";
+			soun5.style.display = "inline";
+			soun6.style.display = "inline";
+			soun7.style.display = "inline";
+			soun8.style.display = "inline";
+			soun9.style.display = "inline";
+			soun10.style.display = "inline";
+			soun11.style.display = "inline";
+		on = false;}
+		soun7.onclick = function(){
+		click.play();
+			tada6.style.display = "none";
+			tada.style.display = "none";
+			tada4.style.display = "none";
+			tada2.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+			self.setTimeout("lookDiv4()",2000);
+			bx2.style.display = "inline";
+			flashlight.style.display = "inline";
+			foo.style.display = "inline";
+		on = true;
+			}
+
+	tada7.onclick = function(){
+		tada7.style.display = "none";
+			tada4.style.display = "inline";
+			tada2.style.display = "none";
+			tada5.style.display = "none";
+			tada3.style.display = "none";
+			tada5.style.display = "none";
+			soun.style.display = "inline";
+			soun2.style.display = "inline";
+			soun3.style.display = "inline";
+			soun4.style.display = "inline";
+			soun5.style.display = "inline";
+			soun6.style.display = "inline";
+			soun7.style.display = "inline";
+			soun8.style.display = "inline";
+			soun9.style.display = "inline";
+			soun10.style.display = "inline";
+			soun11.style.display = "inline";
+		on = false;}
+
+		soun9.onclick = function(){
+		click.play();
+			tada2.style.display = "none";
+			tada.style.display = "none";
+			tada4.style.display = "none";
+			tada6.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+		on = true;
+			}
+	soun5.onclick = function(){
+		click.play();
+		tada6.style.display = "none";
+			tada.style.display = "none";
+			tada5.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+		on = true;
+			}
+
+	soun8.onclick = function(){
+		click.play();
+		tada6.style.display = "none";
+			tada.style.display = "none";
+			tada5.style.display = "none";
+			tada7.style.display = "inline";
+			soun.style.display = "none";
+			soun2.style.display = "none";
+			soun3.style.display = "none";
+			soun4.style.display = "none";
+			soun5.style.display = "none";
+			soun6.style.display = "none";
+			soun7.style.display = "none";
+			soun8.style.display = "none";
+			soun9.style.display = "none";
+			soun10.style.display = "none";
+			soun11.style.display = "none";
+		on = true;
+			}
+	tada5.onclick = function(){
+		tada6.style.display = "none";
+			tada4.style.display = "inline";
+			tada2.style.display = "none";
+			tada5.style.display = "none";
+			tada3.style.display = "none";
+			tada5.style.display = "none";
+			soun.style.display = "inline";
+			soun2.style.display = "inline";
+			soun3.style.display = "inline";
+			soun4.style.display = "inline";
+			soun5.style.display = "inline";
+			soun6.style.display = "inline";
+			soun7.style.display = "inline";
+			soun8.style.display = "inline";
+			soun9.style.display = "inline";
+			soun10.style.display = "inline";
+			soun11.style.display = "inline";
+		on = false;}
+
+
+	tada6.onclick = function(){
+		tada6.style.display = "none";
+			tada4.style.display = "inline";
+			tada2.style.display = "none";
+			tada5.style.display = "none";
+			tada3.style.display = "none";
+			tada5.style.display = "none";
+			soun.style.display = "inline";
+			soun2.style.display = "inline";
+			soun3.style.display = "inline";
+			soun4.style.display = "inline";
+			soun5.style.display = "inline";
+			soun6.style.display = "inline";
+			soun7.style.display = "inline";
+			soun8.style.display = "inline";
+			soun9.style.display = "inline";
+			soun10.style.display = "inline";
+			soun11.style.display = "inline";
+		on = false;}
+
+	foo.onclick = function(){
+		but.play();
+			bx2.style.display = "none";
+			foo.style.display = "none";
+			flashlight.style.display = "none";
+			backk2.style.display = "none";
+			}				
+	tada3.onclick = function(){
+		tada6.style.display = "none";
+			tada4.style.display = "inline";
+			tada2.style.display = "none";
+			tada3.style.display = "none";
+			tada5.style.display = "none";
+			soun.style.display = "inline";
+			soun2.style.display = "inline";
+			soun3.style.display = "inline";
+			soun4.style.display = "inline";
+			soun5.style.display = "inline";
+			soun6.style.display = "inline";
+			soun7.style.display = "inline";
+			soun8.style.display = "inline";
+			soun9.style.display = "inline";
+			soun10.style.display = "inline";
+			soun11.style.display = "inline";
+		on = false;}
+
+	hint.onclick = function(){
+		but.play();
+			bx2.style.display = "inline";
+			hinttxt.style.display = "inline";
+			yaa.style.display = "inline"
+			noo.style.display = "inline"
+			}	
+	yaa3.onclick = function(){
+		but.play();
+
+			hin1.style.display = "inline"
+			hin4.style.display = "inline"
+
+			bx.style.display = "none";
+			hinttxt.style.display = "none";
+			yaa3.style.display = "none"
+			noo.style.display = "none"
+			self.setTimeout("lookDiv5()",3000);
+
+			}
+	yaa.onclick = function(){
+		but.play();
+
+			hin2.style.display = "inline"
+
+			bx2.style.display = "none";
+			hinttxt.style.display = "none";
+			yaa.style.display = "none"
+			noo.style.display = "none"
+			self.setTimeout("lookDiv2()",3000);
+
+			}	
+	noo.onclick = function(){
+		but.play();
+			bx2.style.display = "none";
+			hinttxt.style.display = "none";
+			yaa.style.display = "none"
+			yaa3.style.display = "none"	
+			noo.style.display = "none"
+			}
+	map.onclick = function(){
+		opp.play();
+			toggle = "on";
+			mimi.style.display = "inline";
+			mim.style.display = "inline";
+			map.style.display = "none";
+			mapc.style.display = "inline";
+			backk.style.opacity = "0.5";
+			backk2.style.opacity = "0.5";
+			}	
+	mapc.onclick = function(){
+		clo.play();
+			toggle = "on";
+			mimi.style.display = "none";
+			mim.style.display = "none";
+			map.style.display = "inline";
+			mapc.style.display = "none";
+			backk.style.opacity = "1";
+			backk2.style.opacity = "1";
+			}	
+	mim.onclick = function(){
+		clo.play();
+			toggle = "on";
+			mimi.style.display = "none";
+			mim.style.display = "none";
+			map.style.display = "inline";
+			mapc.style.display = "none";
+			backk.style.opacity = "1";
+			backk2.style.opacity = "1";
+			}
+
+
+
+</script>
+</body>
+</html>
